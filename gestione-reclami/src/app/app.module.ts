@@ -11,6 +11,13 @@ import { DatiClienteComponent } from './pages/reclamo/dati-cliente/dati-cliente.
 import { DatiReclamoComponent } from './pages/reclamo/dati-reclamo/dati-reclamo.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    ReactiveFormsModule
+  ]
+})
 
 @NgModule({
   declarations: [
