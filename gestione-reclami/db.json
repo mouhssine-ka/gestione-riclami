@@ -1,0 +1,48 @@
+[
+    {
+      "id": "1",
+      "dataReclamo": "2024-03-25T08:00:00Z",
+      "causale": "Prodotto difettoso",
+      "complaintText": "Il prodotto che ho acquistato presenta un difetto di fabbricazione",
+      "regione": "Lombardia",
+      "provincia": "Milano",
+      "polo": "Nord"
+    },
+    {
+      "id": "2",
+      "dataReclamo": "2024-03-26T10:30:00Z",
+      "causale": "Servizio scadente",
+      "complaintText": "Il servizio ricevuto è stato molto scadente, con personale poco cortese",
+      "regione": "Lazio",
+      "provincia": "Roma",
+      "polo": "Centro"
+    },
+    {
+      "id": "3",
+      "dataReclamo": "2024-03-27T14:45:00Z",
+      "causale": "Consegna ritardata",
+      "complaintText": "Il pacco che ho ordinato è arrivato con notevole ritardo rispetto alla data prevista",
+      "regione": "Campania",
+      "provincia": "Napoli",
+      "polo": "Sud"
+    },
+    {
+      "id": "4",
+      "dataReclamo": "2024-03-28T09:15:00Z",
+      "causale": "Fatturazione errata",
+      "complaintText": "La fattura ricevuta non corrisponde ai prodotti acquistati",
+      "regione": "Piemonte",
+      "provincia": "Torino",
+      "polo": "Nord"
+    },
+    {
+      "id": "5",
+      "dataReclamo": "2024-03-29T13:20:00Z",
+      "causale": "Manutenzione non eseguita",
+      "complaintText": "La manutenzione programmata non è stata eseguita nei tempi stabiliti",
+      "regione": "Emilia-Romagna",
+      "provincia": "Bologna",
+      "polo": "Centro"
+    }
+  ]
+  
