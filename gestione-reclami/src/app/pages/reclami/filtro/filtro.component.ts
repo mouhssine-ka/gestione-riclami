@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, Validators, FormArray, NonNullableFormBuilder, FormBuilder } from '@angular/forms';
 import { Filter } from 'src/app/shared/models/filter';
+import { causale, provinceItaliane, regioniItaliane, poloInternational, Stato, Gestione, Area } from 'src/app/shared/models/forms/select-values'
 
 @Component({
   selector: 'app-filtro',
@@ -27,6 +28,12 @@ export class FiltroComponent {
     nome: [null],
     cognome: [null]
   });
+
+  // Dati form
+  causaleTipi = causale;
+  statoTipi = Stato;
+  gestioneTipi = Gestione;
+  areaTipi = Area;
 
   @Output() FilterClicked = new EventEmitter<Filter>();
 

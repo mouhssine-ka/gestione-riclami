@@ -27,3 +27,13 @@ export const poloInternational = [
     'Emisfero Nord', 'Emisfero Sud'
 ];
 
+export const Stato = [
+    'In Attesa', 'Assegnato'
+]
+
+export const Gestione = [
+    'Assistenza Clienti', 'Magazzino', 'Logistica', 'Assistenza tecnica'
+]
+
+export const Area = [
+]
