@@ -20,12 +20,12 @@
       },
       "dettaglioReclamo": {
         "dataPresoInCarico": "2024-03-28T12:00:00.000Z",
-        "dataChiusura": null,
+        "dataChiusura": "2024-03-29T12:00:00.000Z",
         "codiceNegozio": "ABC123",
         "manager": "Giovanni Bianchi",
-        "stato": "In attesa",
+        "stato": "Assegnato",
         "gestione": "Assistenza tecnica",
-        "soddisfazione": false
+        "soddisfazione": true
       }
     },
     {
@@ -51,7 +51,7 @@
         "dataChiusura": null,
         "codiceNegozio": "XYZ456",
         "manager": "Marco Verdi",
-        "stato": "In attesa",
+        "stato": "Assegnato",
         "gestione": "Logistica",
         "soddisfazione": false
       }
@@ -76,12 +76,12 @@
       },
       "dettaglioReclamo": {
         "dataPresoInCarico": "2024-03-26T12:00:00.000Z",
-        "dataChiusura": null,
+        "dataChiusura": "2024-03-26T12:00:00.000Z",
         "codiceNegozio": "DEF789",
         "manager": "Luigi Neri",
-        "stato": "In attesa",
+        "stato": "Assegnato",
         "gestione": "Magazzino",
-        "soddisfazione": false
+        "soddisfazione": true
       }
     },
     {
