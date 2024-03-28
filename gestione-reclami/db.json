@@ -1,0 +1,116 @@
+{
+  "complaints": [
+    {
+      "id": "1",
+      "dataReclamo": "2024-03-28T12:00:00.000Z",
+      "causale": "Prodotto difettoso",
+      "complaintText": "Il prodotto ricevuto presenta un difetto di fabbricazione.",
+      "regione": "Lazio",
+      "provincia": "RM",
+      "polo": "Nord",
+      "customer": {
+        "id": "101",
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "email": "mario.rossi@example.com",
+        "telefono": "0123456789",
+        "cellulare": "3456789012",
+        "indirizzo": "Via Roma 123",
+        "provincia": "RM"
+      },
+      "dettaglioReclamo": {
+        "dataPresoInCarico": "2024-03-28T12:00:00.000Z",
+        "dataChiusura": null,
+        "codiceNegozio": "ABC123",
+        "manager": "Giovanni Bianchi",
+        "stato": "In attesa",
+        "gestione": "Assistenza tecnica",
+        "soddisfazione": false
+      }
+    },
+    {
+      "id": "2",
+      "dataReclamo": "2024-03-27T12:00:00.000Z",
+      "causale": "Consegna ritardata",
+      "complaintText": "Il pacco è arrivato in ritardo rispetto alla data prevista.",
+      "regione": "Lombardia",
+      "provincia": "MI",
+      "polo": "Sud",
+      "customer": {
+        "id": "102",
+        "nome": "Laura",
+        "cognome": "Bianchi",
+        "email": "laura.bianchi@example.com",
+        "telefono": "0234567891",
+        "cellulare": "3567890123",
+        "indirizzo": "Via Milano 456",
+        "provincia": "MI"
+      },
+      "dettaglioReclamo": {
+        "dataPresoInCarico": "2024-03-27T12:00:00.000Z",
+        "dataChiusura": null,
+        "codiceNegozio": "XYZ456",
+        "manager": "Marco Verdi",
+        "stato": "In attesa",
+        "gestione": "Logistica",
+        "soddisfazione": false
+      }
+    },
+    {
+      "id": "3",
+      "dataReclamo": "2024-03-26T12:00:00.000Z",
+      "causale": "Prodotto mancante",
+      "complaintText": "Nell'ordine manca un articolo.",
+      "regione": "Campania",
+      "provincia": "NA",
+      "polo": "Centro",
+      "customer": {
+        "id": "103",
+        "nome": "Giuseppe",
+        "cognome": "Verdi",
+        "email": "giuseppe.verdi@example.com",
+        "telefono": "0345678912",
+        "cellulare": "3678901234",
+        "indirizzo": "Via Napoli 789",
+        "provincia": "NA"
+      },
+      "dettaglioReclamo": {
+        "dataPresoInCarico": "2024-03-26T12:00:00.000Z",
+        "dataChiusura": null,
+        "codiceNegozio": "DEF789",
+        "manager": "Luigi Neri",
+        "stato": "In attesa",
+        "gestione": "Magazzino",
+        "soddisfazione": false
+      }
+    },
+    {
+      "id": "4",
+      "dataReclamo": "2024-03-25T12:00:00.000Z",
+      "causale": "Prodotto danneggiato",
+      "complaintText": "Il pacco è arrivato danneggiato.",
+      "regione": "Veneto",
+      "provincia": "VE",
+      "polo": "Ovest",
+      "customer": {
+        "id": "104",
+        "nome": "Anna",
+        "cognome": "Gialli",
+        "email": "anna.gialli@example.com",
+        "telefono": "0456789123",
+        "cellulare": "3789012345",
+        "indirizzo": "Via Venezia 123",
+        "provincia": "VE"
+      },
+      "dettaglioReclamo": {
+        "dataPresoInCarico": "2024-03-25T12:00:00.000Z",
+        "dataChiusura": null,
+        "codiceNegozio": "GHI012",
+        "manager": "Paolo Rossi",
+        "stato": "In attesa",
+        "gestione": "Assistenza clienti",
+        "soddisfazione": false
+      }
+    }
+  ]
+}
