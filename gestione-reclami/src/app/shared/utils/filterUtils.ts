@@ -1,11 +1,11 @@
 import { Filter } from 'src/app/shared/models/filter';
 
-import { complaint } from 'src/app/shared/models/complaint';
+import { Complaint } from 'src/app/shared/models/complaint';
 
 export class FilterUtils {
-    public filtra(list: Iterable<complaint>, filter: Filter): Iterable<complaint> {
+    public filtra(list: Iterable<Complaint>, filter: Filter): Iterable<Complaint> {
         let arrayList = [...list];
-        let filteredArray: Array<complaint> = [];
+        let filteredArray: Array<Complaint> = [];
         arrayList.forEach(element => {
             if (this.filterItemMeetsCriteria(filter, element)) {
                 filteredArray.push(element);
@@ -14,11 +14,11 @@ export class FilterUtils {
         return filteredArray;
     }
 
-    public filterItemMeetsCriteria(filter: Filter, item: complaint): Boolean {
-        let cod_negozioCheck = this.compareValues(filter.codiceNegozio, item.dettaglioReclamo.codiceNegozio);
+    public filterItemMeetsCriteria(filter: Filter, item: Complaint): Boolean {
+        let cod_negozioCheck = this.compareValues(filter.codiceNegozio, item.dettaglioReclamo?.codiceNegozio);
         let descCheck = this.compareValues(filter.descrizione, null);
-        let statoCheck = this.compareValues(filter.stato, item.dettaglioReclamo.stato);
-        let gestioneCheck = this.compareValues(filter.gestione, item.dettaglioReclamo.gestione);
+        let statoCheck = this.compareValues(filter.stato, item.dettaglioReclamo?.stato);
+        let gestioneCheck = this.compareValues(filter.gestione, item.dettaglioReclamo?.gestione);
         let InDate: boolean;
         if (filter.dataSegnalizione == null || item.dataReclamo == null) {
             InDate = true;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Filter } from 'src/app/shared/models/filter';
 
 @Component({
   selector: 'app-reclami',
@@ -7,9 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./reclami.component.scss']
 })
 export class ReclamiComponent {
-  constructor(private router: Router){}
+
+  
+  constructor(private router: Router) { }
   addReclamo() {
     this.router.navigate(['reclamo']);
   }
 
+  filtra($event: Filter) {
+    //avvisa tabella per filtrare
+    
+  }
 }

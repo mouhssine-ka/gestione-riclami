@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ElencoComponent implements OnInit {
 
   complaints: Complaint[] = [];
+
   elenco: ComplaintTable[] = [];
 
   loadingIndicator: boolean = true;
@@ -43,4 +44,5 @@ export class ElencoComponent implements OnInit {
   edit() {
     this.router.navigate(['reclamo']);
   }
+  
 }
