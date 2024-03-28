@@ -1,3 +1,6 @@
+import { Customer } from "./customer";
+import { DettaglioReclamo } from "./elencoReclami";
+
 export interface complaint{
     id?: String;
     dataReclamo?: Date;
@@ -6,4 +9,6 @@ export interface complaint{
     regione?: String;
     provincia?: String;
     polo?: String;
+    customer?: Customer;
+    dettaglioReclamo: DettaglioReclamo;
 }
