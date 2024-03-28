@@ -1,1 +1,29 @@
-<p>dati-cliente works!</p>
+<div class="container border border-3 border-light bg-light " id="container ">
+    <form [formGroup]="datiClienteForm" class="d-flex flex-column ">
+        <h4>Dati Clienti</h4>
+        <hr />
+        <label for="nome">Nome*</label>
+        <input type="text" id="nome" formControlName="nome" name="nome">
+        <label for="cognome">Cognome*</label>
+        <input type="text" id="cognome" formControlName="cognome" name="cognome">
+        <label for="email">Email*</label>
+        <input type="text" id="email" formControlName="email" name="email">
+        <div class="d-flex justify-content-between gap-2 py-3  ">
+            <div class="d-flex flex-column ">
+                <label for="telefono">Telefono</label>
+                <input type="text" id="telefono" formControlName="telefono"  name="telefono">
+            </div>
+            <div class="d-flex flex-column ">
+                <label for="cellulare">Cellulare*</label>
+                <input type="text" id="cellulare" formControlName="cellulare" name="cellulare">
+            </div>
+        </div>
+        <label for="indirizzo">Indirizzo*</label>
+        <input type="text" id="indirizzo" formControlName="indirizzo" name="indirizzo">
+        <label for="provincia">Provincia*</label>
+        <select formControlName="provincia" class="form-control" id="provincia">
+            <option *ngFor="let provincia of provinceItaliane" [value]="provincia">{{ provincia }}</option>
+        </select>
+
+    </form>
+</div>

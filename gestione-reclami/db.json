@@ -25,7 +25,7 @@
         "manager": "Giovanni Bianchi",
         "stato": "In attesa",
         "gestione": "Assistenza tecnica",
-        "soddisfazione": false
+        "soddisfazione": true
       }
     },
     {
@@ -53,7 +53,7 @@
         "manager": "Marco Verdi",
         "stato": "In attesa",
         "gestione": "Logistica",
-        "soddisfazione": false
+        "soddisfazione": true
       }
     },
     {
@@ -110,6 +110,25 @@
         "stato": "In attesa",
         "gestione": "Assistenza clienti",
         "soddisfazione": false
+      }
+    },
+    {
+      "id": "5",
+      "dataReclamo": "1300-02-15",
+      "causale": "Prodotto difettoso",
+      "complaintText": "madfasf ",
+      "shoponline": true,
+      "regione": "Sicilia",
+      "provincia": "Rimini",
+      "polo": "Emisfero Nord",
+      "customer": {
+        "nome": "mario",
+        "cognome": "rossi",
+        "email": "mario@gmail.com",
+        "telefono": "",
+        "cellulare": "2342342134",
+        "indirizzo": "via roma",
+        "provincia": "Roma"
       }
     }
   ]

@@ -1,2 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap';
+
+@font-face{
+    font-family: data-table;
+    src: url('~node_modules/@swimlane/ngx-datatable/assets/fonts/data-table.ttf')
+}
+
+datatable-header {
+    background-color: #e1f1fd86;
+    display: flex;
+    align-items: center;
+}
+
+datatable-header-cell {
+    text-wrap: wrap !important;
+    font-weight: bold;
+}
+.datatable-body-cell-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.datatable-header-cell-template-wrap{
+    display: flex;
+    justify-content: center;
+}
+/* Add lines between rows */
+.datatable-row-wrapper {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc; /* Change the color and thickness as desired */
+}
+
+.ngx-datatable .datatable-row-center {
+    align-items: center;
+}
+
+.datatable-header-cell-wrapper{
+    text-align: center;
+}

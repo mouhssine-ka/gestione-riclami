@@ -1,14 +1,15 @@
 import { Customer } from "./customer";
 import { DettaglioReclamo } from "./elencoReclami";
 
-export interface complaint{
-    id?: String;
+export interface Complaint{
+    id?: string;
     dataReclamo?: Date;
-    causale?: String;
-    complaintText?: String;
-    regione?: String;
-    provincia?: String;
-    polo?: String;
+    causale?: string;
+    complaintText?: string;
+    shoponline?:boolean;
+    regione?: string;
+    provincia?: string;
+    polo?: string;
     customer?: Customer;
-    dettaglioReclamo: DettaglioReclamo;
+    dettaglioReclamo?: DettaglioReclamo;
 }

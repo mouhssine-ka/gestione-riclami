@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { DettaglioReclamo } from '../models/elencoReclami';
+import { Complaint } from '../models/complaint';
+import { ComplaintTable } from '../models/complaintTable';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +14,10 @@ export class ComplaintService {
 
   api = "http://localhost:3000/complaints";
 
-  getComplaints(): Observable<DettaglioReclamo[]>{
-    return this.httpClient.get<DettaglioReclamo[]>(this.api);
+  getComplaints(): Observable<Complaint[]>{
+    return this.httpClient.get<Complaint[]>(this.api);
   }
-  // addComplaints(){
-    //da implementare 
-  // }
+   addComplaints( reclamo : Complaint){
+      return this.httpClient.post<Complaint>(this.api,reclamo)
+   }
 }
