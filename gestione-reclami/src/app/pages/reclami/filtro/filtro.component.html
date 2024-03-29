@@ -1,67 +1,66 @@
-<form class="form" [formGroup]="FilterForm" (ngSubmit)="onSubmit()">
-    <div class="container">
-        <div class="row">
+<form class="form mt-3 p-3 " [formGroup]="FilterForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col">
+            <label for="cod_negozio" class="control-label">Codice Negozio</label>
+            <input type="text" class="form-control" id="cod_negozio" formControlName="codiceNegozio">
+        </div>
+        <div class="col">
+            <label for="desc_negozio" class="control-label">Descrizione Negozio</label>
+            <input type="text" class="form-control" id="desc_negozio" formControlName="descrizione">
+        </div>
+        <div class="col">
+            <label for="stato" class="control-label">Stato</label>
+            <select class="form-control" id="stato" formControlName="stato">
+                <option *ngFor="let stato of statoTipi" value="stato">{{ stato }}</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="gestione" class="control-label">Gestione</label>
+            <select class="form-control" id="gestione" formControlName="gestione">
+                <option *ngFor="let gestione of gestioneTipi" value="gestione">{{ gestione }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="start">Data segnalazione da:</label>
+            <input type="date" class="form-control" id="start" formControlName="dataSegnalizione">
+        </div>
+        <div class="col">
+            <label for="area" class="control-label">Area</label>
+            <select class="form-control" id="area" formControlName="area">
+                <option *ngFor="let area of areaTipi" value="area">{{ area }}</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="causale" class="control-label">Causale</label>
+            <select class="form-control" id="causale" formControlName="causale">
+                <option *ngFor="let causale of causaleTipi" value="causale">{{ causale }}</option>
+            </select>
+        </div>
+    </div>
+    <details>
+
+        <summary class="text-primary mt-3 mb-1">Nascondi/Mostra Filtri Avanzati</summary>
+        <div class="row text-">
             <div class="col">
-                <label for="cod_negozio" class="control-label">Codice Negozio</label>
-                <input type="text" class="form-control" id="cod_negozio" formControlName="codiceNegozio">
+                <label for="ID" class="control-label">ID Reclamo</label>
+                <input type="number" class="form-control" id="ID" formControlName="idReclamo">
             </div>
             <div class="col">
-                <label for="desc_negozio" class="control-label">Descrizione Negozio</label>
-                <input type="text" class="form-control" id="desc_negozio" formControlName="descrizione">
+                <label for="nome_cliente" class="control-label">Nome cliente</label>
+                <input type="text" class="form-control" id="nome_cliente" formControlName="nome">
             </div>
             <div class="col">
-                <label for="stato" class="control-label">Stato</label>
-                <select class="form-control" id="stato" formControlName="stato">
-                    <option *ngFor="let stato of statoTipi" value="stato">{{ stato }}</option>
-                </select>
-            </div>
-            <div class="col">
-                <label for="gestione" class="control-label">Gestione</label>
-                <select class="form-control" id="gestione" formControlName="gestione">
-                    <option *ngFor="let gestione of gestioneTipi" value="gestione">{{ gestione }}</option>
-                </select>
+                <label for="cognome_cliente" class="control-label">Cognome cliente</label>
+                <input type="text" class="form-control" id="cognome_cliente" formControlName="cognome">
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="start">Data segnalazione da:</label>
-                <input type="date" class="form-control" id="start" formControlName="dataSegnalizione">
-            </div>
-            <div class="col">
-                <label for="area" class="control-label">Area</label>
-                <select class="form-control" id="area" formControlName="area">
-                    <option *ngFor="let area of areaTipi" value="area">{{ area }}</option>
-                </select>
-            </div>
-            <div class="col">
-                <label for="causale" class="control-label">Causale</label>
-                <select class="form-control" id="causale" formControlName="causale">
-                    <option *ngFor="let causale of causaleTipi" value="causale">{{ causale }}</option>
-                </select>
-            </div>
-        </div>
-        <details>
-            <summary class="">Nascondi/Mostra Filtri Avanzati</summary>
-            <div class="row">
-                <div class="col">
-                    <label for="ID" class="control-label">ID Reclamo</label>
-                    <input type="number" class="form-control" id="ID" formControlName="idReclamo">
-                </div>
-                <div class="col">
-                    <label for="nome_cliente" class="control-label">Nome cliente</label>
-                    <input type="text" class="form-control" id="nome_cliente" formControlName="nome">
-                </div>
-                <div class="col">
-                    <label for="cognome_cliente" class="control-label">Cognome cliente</label>
-                    <input type="text" class="form-control" id="cognome_cliente" formControlName="cognome">
-                </div>
-            </div>
-        </details>
-        <div class="row">
-            <div class="col text-end gap-1 ">
-                <button class="btn btn-outline-primary mx-2 " type="reset" value="Azzera">Azzera</button>
-                <button class="btn btn-primary" type="submit" [class.disabled]="!hasAnyValue(FilterForm)">Cerca</button>
-            </div>
+    </details>
+    <div class="row ">
+        <div class="col text-end gap-1 ">
+            <button class="btn btn-outline-primary mx-2 rounded rounded-0 fw-bold   " type="reset" value="Azzera">Azzera</button>
+            <button class="btn btn-primary rounded rounded-0  fw-bold cerca" type="submit" [class.disabled]="!hasAnyValue(FilterForm)">Cerca</button>
         </div>
     </div>
 </form>
