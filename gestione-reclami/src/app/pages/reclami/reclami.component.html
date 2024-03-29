@@ -7,5 +7,5 @@
         INSERISCI UN RECLAMO
     </button>
 </div>
-<app-filtro (FilterClicked)="filtra($event)"></app-filtro>
-<app-elenco ></app-elenco>
+<app-filtro (filterClicked)="filtra($event)"></app-filtro>
+<app-elenco [elenco]="elenco"></app-elenco>

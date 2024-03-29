@@ -35,12 +35,12 @@ export class FiltroComponent {
   gestioneTipi = Gestione;
   areaTipi = Area;
 
-  @Output() FilterClicked = new EventEmitter<Filter>();
+  @Output() filterClicked = new EventEmitter<Filter>();
 
   onSubmit(): void {
     let filter: Filter;
     filter = this.parseForm();
-    this.FilterClicked.emit(filter);
+    this.filterClicked.emit(filter);
     // console.log('form ->', this.FilterForm.getRawValue())
   }
 

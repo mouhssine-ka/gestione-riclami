@@ -11,13 +11,13 @@
         <div class="col mt-2">
             <label for="stato" class="control-label pb-2">Stato</label>
             <select class="form-control" id="stato" formControlName="stato">
-                <option *ngFor="let stato of statoTipi" value="stato">{{ stato }}</option>
+                <option *ngFor="let stato of statoTipi" value="{{stato}}">{{ stato }}</option>
             </select>
         </div>
         <div class="col mt-2">
             <label for="gestione" class="control-label pb-2">Gestione</label>
             <select class="form-control" id="gestione" formControlName="gestione">
-                <option *ngFor="let gestione of gestioneTipi" value="gestione">{{ gestione }}</option>
+                <option *ngFor="let gestione of gestioneTipi" value="{{gestione}}">{{ gestione }}</option>
             </select>
         </div>
     </div>
@@ -29,13 +29,13 @@
         <div class="col mt-2">
             <label for="area" class="control-label pb-2">Area</label>
             <select class="form-control" id="area" formControlName="area">
-                <option *ngFor="let area of areaTipi" value="area">{{ area }}</option>
+                <option *ngFor="let area of areaTipi" value="{{area}}">{{ area }}</option>
             </select>
         </div>
         <div class="col mt-2">
             <label for="causale" class="control-label pb-2">Causale</label>
             <select class="form-control" id="causale" formControlName="causale">
-                <option *ngFor="let causale of causaleTipi" value="causale">{{ causale }}</option>
+                <option *ngFor="let causale of causaleTipi" value="{{causale}}">{{ causale }}</option>
             </select>
         </div>
     </div>
