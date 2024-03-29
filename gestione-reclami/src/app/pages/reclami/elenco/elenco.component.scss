@@ -1,4 +1,4 @@
-.searchIcon{
+.searchIcon {
     color: #0d6efd !important;
     border: solid 1px #0d6efd !important;
     font-size: 35px;
@@ -10,6 +10,20 @@
     align-items: center;
     justify-content: center;
 }
-#edit{
+
+#edit {
     cursor: pointer !important;
+}
+
+#export {
+    width: 25px;
+    height: 25px;
+
+}
+
+#esporta {
+    font-family: Arial;
+}
+.elenco{
+    font-size: 15px !important;
 }
