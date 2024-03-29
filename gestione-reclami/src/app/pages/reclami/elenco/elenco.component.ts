@@ -4,6 +4,7 @@ import { ComplaintService } from 'src/app/shared/services/complaint.service';
 import { ComplaintTable } from 'src/app/shared/models/complaintTable';
 import { Router } from '@angular/router';
 import { FilterUtils } from 'src/app/shared/utils/filterUtils';
+import { Filter } from 'src/app/shared/models/filter';
 
 @Component({
   selector: 'app-elenco',
@@ -18,7 +19,7 @@ export class ElencoComponent implements OnInit {
 
   loadingIndicator: boolean = true;
 
-  @Input() filtroEvent = [];
+  @Input() filtroEvent: Filter = {};
 
   constructor(private complaintService: ComplaintService, private router: Router) { }
 
@@ -47,6 +48,5 @@ export class ElencoComponent implements OnInit {
     console.log(idReclamo)
     this.router.navigate(['reclamo', idReclamo]);
   }
-
 
 }

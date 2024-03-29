@@ -1,9 +1,9 @@
 export interface DettaglioReclamo{
-    dataPresoInCarico?: String;
-    dataChiusura?: String;
-    codiceNegozio?: String;
-    manager?: String;
-    stato?: String;
-    gestione?: String;
+    dataPresoInCarico?: string;
+    dataChiusura?: string;
+    codiceNegozio?: string;
+    manager?: string;
+    stato?: string;
+    gestione?: string;
     soddisfazione?: boolean;
 }

@@ -1,13 +1,13 @@
 export interface Filter{
-    codiceNegozio?: String;
-    descrizione?: String;
-    stato?: String;
-    gestione?: String;
-    dataSegnalizione?: String;
-    area?: String;
-    causale?: String;
-    idReclamo?: String;
-    nome?: String;
-    cognome?: String;
-    banner?: String;
+    codiceNegozio?: string;
+    descrizione?: string;
+    stato?: string;
+    gestione?: string;
+    dataSegnalizione?: string;
+    area?: string;
+    causale?: string;
+    idReclamo?: string;
+    nome?: string;
+    cognome?: string;
+    banner?: string;
 }
