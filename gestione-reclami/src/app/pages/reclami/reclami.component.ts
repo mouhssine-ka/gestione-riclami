@@ -9,14 +9,14 @@ import { Filter } from 'src/app/shared/models/filter';
 })
 export class ReclamiComponent {
 
-  
+  filtro: Filter = {};
   constructor(private router: Router) { }
+
   addReclamo() {
     this.router.navigate(['reclamo']);
   }
 
   filtra($event: Filter) {
-    //avvisa tabella per filtrare
-    
+    this.filtro = $event;
   }
 }

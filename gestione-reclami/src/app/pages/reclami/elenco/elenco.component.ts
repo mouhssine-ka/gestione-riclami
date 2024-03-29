@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Complaint } from 'src/app/shared/models/complaint';
 import { ComplaintService } from 'src/app/shared/services/complaint.service';
 import { ComplaintTable } from 'src/app/shared/models/complaintTable';
 import { Router } from '@angular/router';
+import { FilterUtils } from 'src/app/shared/utils/filterUtils';
 
 @Component({
   selector: 'app-elenco',
@@ -16,6 +17,8 @@ export class ElencoComponent implements OnInit {
   elenco: ComplaintTable[] = [];
 
   loadingIndicator: boolean = true;
+
+  @Input() filtroEvent = [];
 
   constructor(private complaintService: ComplaintService, private router: Router) { }
 
@@ -44,5 +47,6 @@ export class ElencoComponent implements OnInit {
     console.log(idReclamo)
     this.router.navigate(['reclamo', idReclamo]);
   }
-  
+
+
 }
