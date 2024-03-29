@@ -1,6 +1,6 @@
 export interface DettaglioReclamo{
-    dataPresoInCarico?: Date;
-    dataChiusura?: Date;
+    dataPresoInCarico?: String;
+    dataChiusura?: String;
     codiceNegozio?: String;
     manager?: String;
     stato?: String;

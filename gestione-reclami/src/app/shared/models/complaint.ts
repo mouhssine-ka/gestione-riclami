@@ -3,12 +3,12 @@ import { DettaglioReclamo } from "./elencoReclami";
 
 export interface Complaint{
     id?: string;
-    dataReclamo?: Date;
+    dataReclamo?: string;
     causale?: string;
     complaintText?: string;
     shoponline?:boolean;
     regione?: string;
-    provincia?: string;
+    provinciaReclamo?: string;
     polo?: string;
     customer?: Customer;
     dettaglioReclamo?: DettaglioReclamo;

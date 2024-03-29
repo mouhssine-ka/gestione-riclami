@@ -36,13 +36,13 @@ export class ElencoComponent implements OnInit {
         soddisfazione: c.dettaglioReclamo?.soddisfazione
       }));
       console.log(this.elenco)
-
       this.loadingIndicator = false;
     });
   }
 
-  edit() {
-    this.router.navigate(['reclamo']);
+  edit(idReclamo: String) {
+    console.log(idReclamo)
+    this.router.navigate(['reclamo', idReclamo]);
   }
   
 }

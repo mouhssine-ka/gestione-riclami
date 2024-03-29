@@ -15,12 +15,15 @@ datatable-header {
 datatable-header-cell {
     text-wrap: wrap !important;
     font-weight: bold;
+    color: black;
+
 }
 .datatable-body-cell-label{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 .datatable-header-cell-template-wrap{
     display: flex;

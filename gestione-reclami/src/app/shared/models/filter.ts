@@ -3,7 +3,7 @@ export interface Filter{
     descrizione?: String;
     stato?: String;
     gestione?: String;
-    dataSegnalizione?: Date;
+    dataSegnalizione?: String;
     area?: String;
     causale?: String;
     idReclamo?: String;

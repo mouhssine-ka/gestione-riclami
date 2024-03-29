@@ -1,5 +1,5 @@
-export const causale = [   
-     'Prodotto difettoso', 'Servizio scadente', ' Consegna ritardata', 'Fatturazione errata'];
+export const causale = [
+    'Prodotto difettoso', 'Servizio scadente', 'Consegna ritardata', 'Fatturazione errata'];
 
 
 export const provinceItaliane = [

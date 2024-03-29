@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: '',
         component: ReclamoComponent
+      },
+      {
+        path: ':id',
+        component: ReclamoComponent
       }
     ]
   },

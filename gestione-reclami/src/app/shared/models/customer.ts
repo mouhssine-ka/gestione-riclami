@@ -1,10 +1,10 @@
 export interface Customer{
-    id?: String;
-    nome?: String;
-    cognome?: String;
-    email?: String;
-    telefono?: String; 
-    cellulare?: String;
-    indirizzo?: String;
-    provincia?: String;
+    id?: string;
+    nome?: string;
+    cognome?: string;
+    email?: string;
+    telefono?: string; 
+    cellulare?: string;
+    indirizzo?: string;
+    provinciaCliente?: string;
 }

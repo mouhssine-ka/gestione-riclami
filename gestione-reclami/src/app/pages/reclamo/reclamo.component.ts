@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NonNullableFormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ComplaintService } from 'src/app/shared/services/complaint.service';
 
 @Component({
@@ -8,16 +8,17 @@ import { ComplaintService } from 'src/app/shared/services/complaint.service';
   templateUrl: './reclamo.component.html',
   styleUrls: ['./reclamo.component.scss']
 })
-export class ReclamoComponent {
+export class ReclamoComponent implements OnInit {
 
+  idReclamo = "";
   reclamoForm = this.fb.group({
     id: [''],
-    dataReclamo: [Validators.required],
+    dataReclamo: ['', Validators.required],
     causale: ['', Validators.required],
     complaintText: ['', Validators.required],
     shoponline: [false, Validators.required],
     regione: ['', Validators.required],
-    provincia: ['', Validators.required],
+    provinciaReclamo: ['', Validators.required],
     polo: ['', Validators.required],
     customer: this.fb.group({
       nome: ['', Validators.required],
@@ -30,18 +31,29 @@ export class ReclamoComponent {
     })
   })
 
+  ngOnInit(): void {
+    this.idReclamo = this.route.snapshot.paramMap.get("id") ?? '';
+    this.complaintService.getComplaintsById(this.idReclamo).subscribe(result => {
+      console.log(result)
+      this.reclamoForm.patchValue(result);
+    })
+  }
 
-  constructor(private fb: NonNullableFormBuilder, private complaintService: ComplaintService, private router: Router) { }
+  constructor(private fb: NonNullableFormBuilder, private complaintService: ComplaintService, private route: ActivatedRoute, private router: Router) { }
 
   onSubmit() {
-    // Esegui azioni con i dati dai due componenti figlio
     let a = this.reclamoForm.getRawValue()
-    this.complaintService.getComplaints().subscribe(result => {
+    this.complaintService.getComplaints().subscribe((result) => {
+      console.log(result)
       a.id = result.length + 1 + "";
       this.complaintService.addComplaints(a).subscribe(() => {
         console.log('value', this.reclamoForm.getRawValue())
         this.router.navigate(['reclami'])
-      })
+      },
+        (error) => {
+          console.log("ciao")
+          this.router.navigate(['reclami']);
+        })
     })
 
   }
