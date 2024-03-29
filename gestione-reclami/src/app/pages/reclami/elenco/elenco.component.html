@@ -3,35 +3,35 @@
     <ngx-datatable class="material" [rows]="elenco" columnMode="force" [headerHeight]="50" [rowHeight]="'auto'"
         [loadingIndicator]="loadingIndicator" [externalSorting]="false">
 
-        <ngx-datatable-column name="ID" prop="idReclamo" [resizeable]="false" [width]="40"></ngx-datatable-column>
+        <ngx-datatable-column name="ID" prop="idReclamo" [resizeable]="false" [width]="40" [sortable]="false"></ngx-datatable-column>
 
-        <ngx-datatable-column name="SEGNALTO" prop="dataSegnalazione" [resizeable]="false" [width]="100">
+        <ngx-datatable-column name="SEGNALTO" prop="dataSegnalazione" [resizeable]="false" [width]="100" [sortable]="true">
             <ng-template let-row="row" ngx-datatable-cell-template>
                 {{ row.dataSegnalazione | date: 'dd/MM/yyyy' }}
             </ng-template>
         </ngx-datatable-column>
 
-        <ngx-datatable-column name="PRESO IN CARICO IL" prop="dataPresoInCarico" [resizeable]="false" [width]="100">
+        <ngx-datatable-column name="PRESO IN CARICO IL" prop="dataPresoInCarico" [resizeable]="false" [width]="100" [sortable]="false">
             <ng-template let-row="row" ngx-datatable-cell-template>
                 {{ row.dataPresoInCarico | date: 'dd/MM/yyyy' }}
             </ng-template>
         </ngx-datatable-column>
 
-        <ngx-datatable-column name="CHIUSO IL" prop="dataChiusura" [resizeable]="false" [width]="100">
+        <ngx-datatable-column name="CHIUSO IL" prop="dataChiusura" [resizeable]="false" [width]="100" [sortable]="false">
             <ng-template let-row="row" ngx-datatable-cell-template>
                 {{ row.dataChiusura | date: 'dd/MM/yyyy' }}
             </ng-template>
         </ngx-datatable-column>
 
         <ngx-datatable-column name="NEGOZIO" prop="codiceNegozio" [resizeable]="false"
-            [width]="100"></ngx-datatable-column>
-        <ngx-datatable-column name="MANAGER" prop="manager" [resizeable]="false" [width]="120"></ngx-datatable-column>
-        <ngx-datatable-column name="CLIENTE" prop="cliente" [resizeable]="false" [width]="130"></ngx-datatable-column>
-        <ngx-datatable-column name="STATO" prop="stato" [resizeable]="false" [width]="120"></ngx-datatable-column>
-        <ngx-datatable-column name="GESTIONE" prop="gestione" [resizeable]="false" [width]="120"></ngx-datatable-column>
+            [width]="100" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="MANAGER" prop="manager" [resizeable]="false" [width]="120" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="CLIENTE" prop="cliente" [resizeable]="false" [width]="130" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="STATO" prop="stato" [resizeable]="false" [width]="120" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="GESTIONE" prop="gestione" [resizeable]="false" [width]="120" [sortable]="false"></ngx-datatable-column>
         <ngx-datatable-column name="CAUSALE RECLAMO" prop="causaleReclamo" [resizeable]="false"
-            [width]="150"></ngx-datatable-column>
-        <ngx-datatable-column name="SODDISFAZIONE" prop="soddisfazione" [resizeable]="false" [width]="130" class="centered-column ">
+            [width]="150" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="SODDISFAZIONE" prop="soddisfazione" [resizeable]="false" [width]="130" class="centered-column " [sortable]="false">
             <ng-template let-row="row" ngx-datatable-cell-template>
                 <ng-container *ngIf="row.stato == 'Chiuso'; else showstato">
                     <ng-container *ngIf="row.soddisfazione; else notSoddisfazione">
@@ -49,9 +49,9 @@
                 </ng-template>
             </ng-template>
         </ngx-datatable-column>
-        <ngx-datatable-column name="" [resizeable]="false" [width]="50">
+        <ngx-datatable-column name="" [resizeable]="false" [width]="50"  [sortable]="false">
             <ng-template let-row="row" ngx-datatable-cell-template>
-                <span class="material-symbols-outlined searchIcon p-1" (click)="edit(row.idReclamo)">
+                <span class="material-symbols-outlined searchIcon p-1" id="edit" (click)="edit(row.idReclamo)">
                     search
                 </span>
             </ng-template>
