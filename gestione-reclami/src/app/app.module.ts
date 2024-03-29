@@ -28,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     NgxDatatableModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

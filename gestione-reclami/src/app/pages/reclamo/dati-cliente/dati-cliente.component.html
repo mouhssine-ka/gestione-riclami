@@ -2,11 +2,11 @@
     <form [formGroup]="datiClienteForm" class="d-flex flex-column ">
         <h4>Dati Clienti</h4>
         <hr />
-        <label for="nome">Nome*</label>
+        <label for="nome">Nome<span class="text-primary fs-5  ">•</span></label>
         <input type="text" id="nome" formControlName="nome" name="nome">
-        <label for="cognome">Cognome*</label>
+        <label for="cognome">Cognome<span class="text-primary fs-5  ">•</span></label>
         <input type="text" id="cognome" formControlName="cognome" name="cognome">
-        <label for="email">Email*</label>
+        <label for="email">Email<span class="text-primary fs-5  ">•</span></label>
         <input type="text" id="email" formControlName="email" name="email">
         <div class="d-flex justify-content-between gap-2 py-3  ">
             <div class="d-flex flex-column ">
@@ -14,13 +14,13 @@
                 <input type="text" id="telefono" formControlName="telefono"  name="telefono">
             </div>
             <div class="d-flex flex-column ">
-                <label for="cellulare">Cellulare*</label>
+                <label for="cellulare">Cellulare<span class="text-primary fs-5  ">•</span></label>
                 <input type="text" id="cellulare" formControlName="cellulare" name="cellulare">
             </div>
         </div>
-        <label for="indirizzo">Indirizzo*</label>
+        <label for="indirizzo">Indirizzo<span class="text-primary fs-5  ">•</span></label>
         <input type="text" id="indirizzo" formControlName="indirizzo" name="indirizzo">
-        <label for="provincia">Provincia*</label>
+        <label for="provincia">Provincia<span class="text-primary fs-5  ">•</span></label>
         <select formControlName="provincia" class="form-control" id="provincia">
             <option *ngFor="let provincia of provinceItaliane" [value]="provincia">{{ provincia }}</option>
         </select>
