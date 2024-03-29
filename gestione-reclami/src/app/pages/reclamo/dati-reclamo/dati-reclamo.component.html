@@ -6,7 +6,7 @@
         </div>
         <div>
             <label for="causale">Causale<span class="text-primary fs-5  ">•</span></label>
-            <select formControlName="causale" class="form-control" id="causale">
+            <select formControlName="causale" class="form-control form-select" id="causale">
                 <option *ngFor="let causale of causaleTipi" [value]="causale">{{ causale }}</option>
             </select>
         </div>
@@ -26,20 +26,20 @@
         <div class="d-flex justify-content-between gap-2 py-3" id="posizione">
             <div class="d-flex flex-column w-75  ">
                 <label for="regione">Regione<span class="text-primary fs-5  ">•</span></label>
-                <select formControlName="regione" class="form-control" id="regione">
+                <select formControlName="regione" class="form-control form-select" id="regione">
                     <option *ngFor="let regione of regioniItaliane" [value]="regione">{{ regione }}</option>
                 </select>
             </div>
             <div class="d-flex flex-column w-25">
                 <label for="provincia">Provincia<span class="text-primary fs-5  ">•</span></label>
-                <select formControlName="provincia" class="form-control" id="provincia">
+                <select formControlName="provinciaReclamo" class="form-control form-select" id="provincia">
                     <option *ngFor="let provincia of provinceItaliane" [value]="provincia">{{ provincia }}</option>
                 </select>
             </div>
         </div>
         <div>
             <label for="polo">Polo<span class="text-primary fs-5  ">•</span></label>
-            <select formControlName="polo" class="form-control" id="polo">
+            <select formControlName="polo" class="form-control form-select" id="polo">
                 <option *ngFor="let polo of poloInternational" [value]="polo">{{ polo }}</option>
             </select>
         </div>

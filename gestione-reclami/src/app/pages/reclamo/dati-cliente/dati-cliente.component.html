@@ -21,7 +21,7 @@
         <label for="indirizzo">Indirizzo<span class="text-primary fs-5  ">•</span></label>
         <input type="text" id="indirizzo" formControlName="indirizzo" name="indirizzo">
         <label for="provincia">Provincia<span class="text-primary fs-5  ">•</span></label>
-        <select formControlName="provincia" class="form-control" id="provincia">
+        <select formControlName="provinciaCliente" class="form-control form-select" id="provincia">
             <option *ngFor="let provincia of provinceItaliane" [value]="provincia">{{ provincia }}</option>
         </select>
 

@@ -48,7 +48,7 @@ export class ReclamiComponent implements OnInit {
   filtra($event: Filter) {
     console.log($event)
     let filterUtils: FilterUtils = new FilterUtils();
-    filterUtils.filtra(this.complaints, $event);
+    this.complaints = filterUtils.filtra(this.complaints, $event);
     
   }
 }
