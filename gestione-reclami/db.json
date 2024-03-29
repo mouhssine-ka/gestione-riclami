@@ -23,7 +23,7 @@
         "dataChiusura": null,
         "codiceNegozio": "ABC123",
         "manager": "Giovanni Bianchi",
-        "stato": "Non preso in carico",
+        "stato": "Assegnato",
         "gestione": "Assistenza tecnica",
         "soddisfazione": true
       }
@@ -79,7 +79,7 @@
         "dataChiusura": null,
         "codiceNegozio": "DEF789",
         "manager": "Luigi Neri",
-        "stato": "Non preso in carico",
+        "stato": "Assegnato",
         "gestione": "Logistica",
         "soddisfazione": false
       }

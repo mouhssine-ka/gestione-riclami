@@ -1,10 +1,8 @@
-<div class="m-4 text-uppercase text-info-emphasis elenco">
+<div class="m-3 text-uppercase text-info-emphasis elenco">
     <div class="d-flex justify-content-between gap-2 ">
-        <div class="">
-            <p>Trovati <span>{{elenco.length}}</span> risultati</p>
-        </div>
-        <div class="w-25 d-flex justify-content-end gap-3 pe-1 fw-bold fs-6">
-            <p class="text-primary" id="esporta">ESPORTA</p>
+        <p>Trovati <span>{{elenco.length}}</span> risultati</p>
+        <div class="esportContainer">
+            <span class="text-primary fw-bold " id="esporta">ESPORTA</span>
             <img src="../../../../assets/excel.png" alt="EXPORT" id="export">
         </div>
     </div>
@@ -22,7 +20,7 @@
             </ng-template>
         </ngx-datatable-column>
 
-        <ngx-datatable-column name="PRESO IN CARICO IL" prop="dataPresoInCarico" [resizeable]="false" [width]="100"
+        <ngx-datatable-column name="PRESO IN CARICO IL" prop="dataPresoInCarico" [resizeable]="false" [width]="80"
             [sortable]="false">
             <ng-template let-row="row" ngx-datatable-cell-template>
                 {{ row.dataPresoInCarico | date: 'dd/MM/yyyy' }}
@@ -44,7 +42,7 @@
             [sortable]="false"></ngx-datatable-column>
         <ngx-datatable-column name="STATO" prop="stato" [resizeable]="false" [width]="120"
             [sortable]="false"></ngx-datatable-column>
-        <ngx-datatable-column name="GESTIONE" prop="gestione" [resizeable]="false" [width]="120"
+        <ngx-datatable-column name="GESTIONE" prop="gestione" [resizeable]="false" [width]="80"
             [sortable]="false"></ngx-datatable-column>
         <ngx-datatable-column name="CAUSALE RECLAMO" prop="causaleReclamo" [resizeable]="false" [width]="150"
             [sortable]="false"></ngx-datatable-column>

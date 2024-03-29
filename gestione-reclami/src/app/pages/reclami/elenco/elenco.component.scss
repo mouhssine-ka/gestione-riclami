@@ -23,7 +23,19 @@
 
 #esporta {
     font-family: Arial;
+    height: 100%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
 }
 .elenco{
-    font-size: 15px !important;
+    font-size: 13.5px !important;
+}
+
+.esportContainer{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
